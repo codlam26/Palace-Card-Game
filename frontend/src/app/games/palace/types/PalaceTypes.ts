@@ -9,3 +9,15 @@ export interface GameBoardProps {
 }
 
 export type CardType = { id: string; suit: string; value: string };
+
+export interface PlayerState {
+  id: string;
+  hand: CardType[];
+  faceUp: CardType[];
+  faceDownCount: number;
+  phase: string;
+}
+
+export interface deckProps {
+  deck: CardType[];
+}

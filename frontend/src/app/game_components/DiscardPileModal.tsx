@@ -1,7 +1,7 @@
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@headlessui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import Card from "./Card";
-import { CardType } from "@/types/gameBoardType";
+import { CardType } from "@/app/games/palace/types/PalaceTypes";
 
 interface DiscardPileModalProps {
   pile: CardType[];

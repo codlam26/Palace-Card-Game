@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import GameBoard from "./components/GameBoard";
+import GameBoard from "./games/palace/components/GameBoard";
 import socket from "./socket";
 
 export default function Home() {
@@ -66,13 +66,10 @@ export default function Home() {
   const startGame = () => {
     socket.emit("start_game", room);
     console.log("Starting game")
-    console.log(gameState)
-    console.log(isStarted)
   };
 
   return (
-    <div className="flex flex-col items-center p-10">
-      <h1 className="text-2xl font-bold mb-4">Palace Card Game</h1>
+    <div className="flex flex-col items-center">
     {!isStarted && (
       <>
       {/* Room input */}
@@ -94,7 +91,7 @@ export default function Home() {
           Join Room
         </button>
       </div>
-      </>)}
+      
 
       {/* Room status */}
       {players.length > 0 && (
@@ -105,6 +102,7 @@ export default function Home() {
           <p>Game started: {isStarted ? "Yes" : "No"}</p>
         </div>
       )}
+      </>)}
 
       {/* Start game button */}
       {isLeader && players.length >= 2 && !isStarted && (

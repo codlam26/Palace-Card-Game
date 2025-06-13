@@ -66,6 +66,7 @@ export class PalaceGame {
                 phase: p.phase,
             })),
             pile: this.pile,
+            deck: this.deck,
             currentPlayer: this.getCurrentPlayer().id
         }
     }

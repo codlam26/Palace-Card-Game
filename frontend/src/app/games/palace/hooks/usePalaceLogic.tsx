@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CardType } from "@/types/gameBoardType";
+import { CardType } from "@/app/games/palace/types/PalaceTypes";
 import { Socket } from "socket.io-client";
 
 export function usePalaceLogic(socket: Socket, room: string, playerId: string) {

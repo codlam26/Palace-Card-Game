@@ -1,5 +1,5 @@
 import Card from "./Card";
-import { CardType } from "@/types/gameBoardType";
+import { CardType } from "@/app/games/palace/types/PalaceTypes";
 
 interface Props {
   pile: CardType[];
@@ -21,9 +21,12 @@ export default function DiscardPileSection({ pile, onOpenModal }: Props) {
           <p className="text-xs text-gray-400">({pile.length} cards)</p>
         </div>
       ) : (
+        <>
         <div className="w-24 h-36 bg-gray-300 flex items-center justify-center rounded-lg text-sm text-gray-500 border">
           Empty
         </div>
+        <p className="text-xs text-gray-400">({pile.length} cards)</p>
+        </>
       )}
     </div>
   );

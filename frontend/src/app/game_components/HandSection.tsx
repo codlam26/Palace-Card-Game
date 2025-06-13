@@ -1,5 +1,5 @@
 import Card from "./Card";
-import { CardType } from "@/types/gameBoardType";
+import { CardType } from "@/app/games/palace/types/PalaceTypes";
 import { AnimatePresence } from "framer-motion";
 
 interface Props {
